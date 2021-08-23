@@ -1,0 +1,18 @@
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 https://maven.apache.org/xsd/settings-1.0.0.xsd">
+  <localRepository>${user.home}/.m2/repository</localRepository>
+  <interactiveMode>true</interactiveMode>
+  <offline>false</offline>
+  <activeProfiles>
+    <activeProfile>sonar</activeProfile>
+  </activeProfiles>
+  <profiles>
+    <profile>
+      <id>sonar</id>
+      <properties>
+        <!-- Optional URL to server. Default value is http://localhost:9000 -->
+        <sonar.login>9b53e49f4e395b32c4c8424491a25c5f4d9c2879</sonar.login>
+      </properties>
+    </profile>
+  </profiles>
+</settings>
