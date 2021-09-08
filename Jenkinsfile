@@ -1,5 +1,9 @@
 pipeline {
   agent any
+  tools { 
+        maven 'maven3.6' 
+        jdk 'jdk11' 
+    }
   stages {
     stage('Clone Down'){
       steps{
