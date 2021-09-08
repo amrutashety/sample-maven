@@ -9,7 +9,7 @@ pipeline {
 
     stage('Push Docker App'){      
       steps {
-        echo "build"
+        sh "mvn clean install sonar:sonar"
       }
     }
   }
