@@ -1,8 +1,7 @@
 pipeline {
   agent any
   tools { 
-        maven 'maven3.6' 
-        jdk 'jdk11' 
+        maven 'maven'
     }
   stages {
     stage('Clone Down'){
@@ -11,9 +10,9 @@ pipeline {
       }
     }
 
-    stage('Push Docker App'){      
+    stage('Build and code analysis'){      
       steps {
-        sh "mvn clean install sonar:sonar"
+        sh "mvn clean install sonar:sonar -s settings.xml"
       }
     }
   }
